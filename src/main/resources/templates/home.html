@@ -16,7 +16,7 @@
 -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Boot Heroku Example</title>
+    <title>Home</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -27,7 +27,7 @@
 <body>
 <div class="container">
     <div class="page-header">
-        <h1>Spring Boot Heroku Example</h1>
+        <h1>Resords</h1>
     </div>
 
     <div class="row">
@@ -36,8 +36,11 @@
                 <div class="form-group">
                     <label for="data">Record to insert</label>
                     <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
+                    
+                    <label for="desc">Record to insert</label>
+                    <input id="desc" type="text" class="form-control" placeholder="Description..." th:field="*{desc}" />
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">Add</button>
             </form>
         </div>
     </div>
@@ -54,6 +57,7 @@
                 <tbody>
                     <tr th:each="record : ${records}">
                         <td th:text="${record.data}">Some text</td>
+                        <td th:text="${record.desc}">Some text</td>
                     </tr>
                 </tbody>
             </table>

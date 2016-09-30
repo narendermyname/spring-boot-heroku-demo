@@ -15,6 +15,8 @@ public class Record {
     private long id;
     @NotEmpty
     private String data;
+    
+    private String desc;
 
     public String getData() {
         return data;
@@ -24,4 +26,19 @@ public class Record {
         this.data = data;
     }
 
+	/**
+	 * @return the desc
+	 */
+	public String getDesc() {
+		return desc;
+	}
+
+	/**
+	 * @param desc the desc to set
+	 */
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+    
 }

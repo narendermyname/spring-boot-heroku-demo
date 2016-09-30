@@ -54,10 +54,4 @@ public class HomeController {
         }
         return home(model);
     }
-    
-    @RequestMapping(name = "hello",method = RequestMethod.POST)
-    public String hello() {
-        
-        return "Hello";
-    }
 }
